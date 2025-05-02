@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CMSIS Debugger: pyOCD",
+            "type": "gdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${command:cmsis-csolution.getBinaryFile}",
+            "gdb": "arm-none-eabi-gdb",
+            "initCommands": [
+                "load ./out/hello/NUCLEO-F756ZG/Debug/hello.hex",
+                "tbreak main"
+            ],
+            "target": {
+                "server": "pyocd",
+                "port": "3333"
+            },
+            "cmsis": {
+                "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}"
+            }
+            "definitionPath": "/Users/chrsei01/.cache/arm/packs/Keil/STM32F7xx_DFP/3.0.0/CMSIS/SVD/STM32F756xx.svd"
+        }
+    ]
+}

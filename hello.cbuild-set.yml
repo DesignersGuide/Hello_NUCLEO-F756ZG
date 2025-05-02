@@ -1,0 +1,4 @@
+cbuild-set:
+  generated-by: csolution version 2.8.0
+  contexts:
+    - context: hello.Debug+NUCLEO-F756ZG
