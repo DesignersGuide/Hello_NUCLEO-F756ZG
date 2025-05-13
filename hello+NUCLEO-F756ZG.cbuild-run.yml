@@ -56,11 +56,11 @@ cbuild-run:
     - file: ${CMSIS_PACK_ROOT}/Keil/STM32F7xx_DFP/3.0.0/CMSIS/SVD/STM32F756.svd
       type: svd
   output:
-    - file: out/hello/NUCLEO-F756ZG/Debug/hello.axf
-      info: generate by hello.Debug+NUCLEO-F756ZG
+    - file: out/hello_nucleo/NUCLEO-F756ZG/Debug/hello_nucleo.axf
+      info: generate by hello_nucleo.Debug+NUCLEO-F756ZG
       type: elf
-    - file: out/hello/NUCLEO-F756ZG/Debug/hello.hex
-      info: generate by hello.Debug+NUCLEO-F756ZG
+    - file: out/hello_nucleo/NUCLEO-F756ZG/Debug/hello_nucleo.hex
+      info: generate by hello_nucleo.Debug+NUCLEO-F756ZG
       type: hex
   system-resources:
     memory:
@@ -107,7 +107,7 @@ cbuild-run:
     - name: ST-Link
       port: swd
       clock: 10000000
-      dbgconf: RTE/Device/STM32F756ZGTx/STM32F74x_75x.dbgconf
+      dbgconf: nucleo/RTE/Device/STM32F756ZGTx/STM32F74x_75x.dbgconf
   debug-vars:
     vars: |
       __var DbgMCU_CR      = 0x00000007;   // DBGMCU_CR: DBG_SLEEP, DBG_STOP, DBG_STANDBY

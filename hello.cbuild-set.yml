@@ -1,4 +1,4 @@
 cbuild-set:
-  generated-by: csolution version 2.8.0
+  generated-by: vscode-cmsis-csolution version 1.52.0
   contexts:
-    - context: hello.Debug+NUCLEO-F756ZG
+    - context: hello_avh.Debug+avh

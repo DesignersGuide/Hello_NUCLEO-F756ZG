@@ -18,13 +18,13 @@ project:
   groups:
     - group: Documentation
       files:
-        - file: README.md
+        - file: ../README.md
     - group: Application
       files:
-        - file: hello.c
+        - file: ../hello.c
     - group: Board
       files:
-        - file: retarget_stdio.c
+        - file: ../retarget_stdio.c
           define:
             - RETARGET_STDIO_UART: 3
 

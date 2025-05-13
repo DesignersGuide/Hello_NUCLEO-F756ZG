@@ -11,19 +11,22 @@ solution:
 
   # List the packs that define the device and/or board.
   packs:
-    - pack: ARM::CMSIS-Driver_STM32@>=1.0.0-0
-    - pack: ARM::CMSIS@>=6.0.0
-    - pack: ARM::CMSIS-RTX@>=5.9.0
-    - pack: ARM::CMSIS-Compiler@>=2.0.0
-    - pack: Keil::STM32F7xx_DFP@>=3.0.0-0
-    - pack: Keil::NUCLEO-F756ZG_BSP@>=2.0.0-0
+    - pack: ARM::CMSIS-Driver_STM32
+    - pack: ARM::CMSIS
+    - pack: ARM::Cortex_DFP
+    - pack: ARM::CMSIS-RTX
+    - pack: ARM::CMSIS-Compiler
+    - pack: Keil::STM32F7xx_DFP
+    - pack: Keil::NUCLEO-F756ZG_BSP
 
   # List different hardware targets that are used to deploy the solution.
   target-types:
     - type: NUCLEO-F756ZG
       board: STMicroelectronics::NUCLEO-F756ZG
       device: STMicroelectronics::STM32F756ZGTx
-      
+    - type: avh
+      device: ARMCM7
+
   # List of different build configurations.
   build-types:
     - type: Debug
@@ -35,14 +38,17 @@ solution:
       optimize: balanced
 
   misc:
-      - for-compiler: AC6
-        C-CPP:
-          - -gdwarf-5
-        ASM:
-          - -gdwarf-5
-        Link:
-          - --entry=Reset_Handler
-        
+    - for-compiler: AC6
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+      Link:
+        - --entry=Reset_Handler
+
   # List related projects.
   projects:
-    - project: ./hello.cproject.yml
+    - project: ./nucleo/hello_nucleo.cproject.yml
+      for-context: +NUCLEO-F756ZG
+    - project: ./avh/hello_avh.cproject.yml
+      for-context: +avh

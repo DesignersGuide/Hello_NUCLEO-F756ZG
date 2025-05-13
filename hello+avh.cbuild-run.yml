@@ -1,0 +1,34 @@
+cbuild-run:
+  generated-by: csolution version 2.8.0
+  solution: hello.csolution.yml
+  target-type: avh
+  compiler: AC6
+  device: ARM::ARMCM7
+  device-pack: ARM::Cortex_DFP@1.1.0
+  output:
+    - file: out/hello_avh/avh/Debug/hello_avh.axf
+      info: generate by hello_avh.Debug+avh
+      type: elf
+    - file: out/hello_avh/avh/Debug/hello_avh.hex
+      info: generate by hello_avh.Debug+avh
+      type: hex
+  system-resources:
+    memory:
+      - name: ROM
+        access: rx
+        start: 0x00000000
+        size: 0x00040000
+        default: true
+        startup: true
+        from-pack: ARM::Cortex_DFP@1.1.0
+      - name: RAM
+        access: rwx
+        start: 0x20000000
+        size: 0x00020000
+        default: true
+        from-pack: ARM::Cortex_DFP@1.1.0
+  debugger:
+    - name: <default>
+      port: swd
+      clock: 10000000
+      dbgconf: ../../../../..

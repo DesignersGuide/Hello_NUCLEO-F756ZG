@@ -12,7 +12,7 @@
             "program": "${command:cmsis-csolution.getBinaryFile}",
             "gdb": "arm-none-eabi-gdb",
             "initCommands": [
-                "load ./out/hello/NUCLEO-F756ZG/Debug/hello.hex",
+                "load ./out/hello_nucleo/NUCLEO-F756ZG/Debug/hello_nucleo.hex",
                 "tbreak main"
             ],
             "target": {

@@ -1,5 +1,5 @@
 {
     "clangd.arguments": [
-        "--compile-commands-dir=/Users/chrsei01/02_Git/Arm-Examples/Hello_NUCLEO-F756ZG/out/hello/NUCLEO-F756ZG/Debug"
+        "--compile-commands-dir=/Users/chrsei01/02_Git/Arm-Examples/Hello_NUCLEO-F756ZG/out/hello_avh/avh/Debug"
     ]
 }

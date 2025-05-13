@@ -40,7 +40,20 @@ jobs:
           cpackget init https://www.keil.com/pack/index.pidx
           cpackget update-index
 
-      # Build the release and debug executable for the AC6 compiler
-      - name: Build release and debug executable
+      # Build the release and debug executable for the AC6 compiler for the NUCLEO-F756ZG board
+      - name: Build release and debug executable for F756ZG
         run: |
           cbuild hello.csolution.yml --packs --context .+NUCLEO-F756ZG --rebuild
+
+      # Build the release and debug executable for the AC6 compiler for Arm Virtual Hardware
+      - name: Build release and debug executable for AVH
+        run: |
+          cbuild hello.csolution.yml --packs --context .+avh --rebuild
+
+      # Run the debug executable on Arm Virtual Hardware
+      - name: Execute
+        run: |
+          echo "Running get started example ..."
+          FVP_MPS2_Cortex-M7 --simlimit 10 -f fvp_config.txt -a out/hello_avh/avh/Debug/hello_avh.axf | tee hello_avh.log
+          echo "Checking output..."
+          test "$(grep "FAIL: " hello_avh.log | wc -l)" -eq 0
