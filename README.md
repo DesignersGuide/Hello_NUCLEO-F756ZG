@@ -67,3 +67,4 @@ Before starting to debug the application, make sure that you have gone through t
 ### Using Visual Studio Code with extensions
 
 Open the 'CMSIS' view from the side bar and press the 'Debug' button.
+ 
