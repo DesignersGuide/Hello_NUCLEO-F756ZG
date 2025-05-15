@@ -63,7 +63,9 @@ cbuild hello.csolution.yml
 
 - In a VS Code terminal, run:
 
-  `FVP_MPS2_Cortex-M7 --simlimit 10 -f fvp_config.txt -a out/hello_avh/avh/Debug/hello_avh.axf`.
+  ```sh
+  FVP_MPS2_Cortex-M7 --simlimit 10 -f fvp_config.txt -a out/hello_avh/avh/Debug/hello_avh.axf
+  ```
 
 ## Debug the application on target hardware
 
