@@ -59,7 +59,7 @@ cbuild hello.csolution.yml
 - Open terminal on the PC and connect to the board's serial port with 115200 baud rate.
 - Observe the terminal output.
 
-## Simulation on AVH
+### Simulation on AVH
 
 - In a VS Code terminal, run:
 
