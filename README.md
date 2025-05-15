@@ -42,7 +42,7 @@ cbuild hello.csolution.yml
  
 ## Run the application
 
-### Using Visual Studio Code with extensions
+### On target hardware
 
 - Connect the board's ST-LINK USB to the PC (provides also power).
 - Open the 'Device Manager' view from the side bar:
@@ -59,7 +59,11 @@ cbuild hello.csolution.yml
 - Open terminal on the PC and connect to the board's serial port with 115200 baud rate.
 - Observe the terminal output.
 
-## Debug the application
+## Simulation on AVH
+
+- In a VS Code termina, run `FVP_MPS2_Cortex-M7 --simlimit 10 -f fvp_config.txt -a out/hello_avh/avh/Debug/hello_avh.axf`.
+
+## Debug the application on target hardware
 
 Before starting to debug the application, make sure that you have gone through the steps as described in the
 [run the application](#run-the-application) section.
