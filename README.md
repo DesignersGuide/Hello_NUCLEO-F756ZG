@@ -39,7 +39,7 @@ Build the project by executing the following command:
 ```sh
 cbuild hello.csolution.yml
 ```
-
+ 
 ## Run the application
 
 ### Using Visual Studio Code with extensions
