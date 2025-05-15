@@ -1,4 +1,5 @@
 .clangd
+.vscode/settings.json
 *.cbuild-idx.yml
 **.cbuild.yml
 *.cbuild-pack.yml
