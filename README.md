@@ -10,7 +10,7 @@ This example prints "Hello World" and a counter value via the standard output wh
 
 ### Tools
 
-- [CMSIS-Toolbox v2.8.0](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases) or newer
+- [CMSIS-Toolbox v2.9.0](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/releases) or newer
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/download) with Keil Studio Pack extension (optional, alternatively CLI can be used)
 - [Arm Compiler 6](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded) (automatically installed when using Visual Studio Code with vcpkg)
 
