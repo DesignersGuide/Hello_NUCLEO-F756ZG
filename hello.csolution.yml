@@ -1,7 +1,7 @@
 # A solution is a collection of related projects that share same base configuration.
 solution:
   description: Simple Hello World example for NUCLEO-F756ZG
-  created-for: CMSIS-Toolbox@2.6.0
+  created-for: CMSIS-Toolbox@2.9.0
   cdefault:
 
   # List of tested compilers that can be selected
