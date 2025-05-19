@@ -24,6 +24,10 @@ solution:
     - type: NUCLEO-F756ZG
       board: STMicroelectronics::NUCLEO-F756ZG
       device: STMicroelectronics::STM32F756ZGTx
+      target-set:
+       - set: 
+         debugger:
+           name: ST-LINK
     - type: avh
       device: ARMCM7
 
