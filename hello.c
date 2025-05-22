@@ -28,7 +28,7 @@ static void app_main_thread (void *argument) {
 
   for(int count = 0; count < 10; count++) {
     printf("Hello KeilChris %d\r\n", count);
-    osDelay(5000U);
+    osDelay(500U);
   }
   osDelay(osWaitForever);
 }
