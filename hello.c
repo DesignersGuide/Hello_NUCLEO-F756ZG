@@ -30,7 +30,7 @@ static void app_main_thread (void *argument) {
     printf("Hello KeilChris %d\r\n", count);
     osDelay(500U)
   }
-  osDelay(osWaitForever)
+  osDelay(osWaitForever);
 }
 
 /*-----------------------------------------------------------------------------
