@@ -22,11 +22,11 @@
             "definitionPath": "/Users/chrsei01/.cache/arm/packs/Keil/STM32F7xx_DFP/3.0.0/CMSIS/SVD/STM32F756xx.svd"
         },
         {
-            "name": "STLink@pyOCD (launch)",
+            "name": "CMSIS_DAP@pyOCD (launch)",
             "type": "gdbtarget",
             "request": "launch",
             "cwd": "${workspaceFolder}/",
-            "program": "out/hello_nucleo/NUCLEO-F756ZG/Debug/hello_nucleo.axf",
+            "program": "out/hello_avh/avh/Debug/hello_avh.axf",
             "gdb": "arm-none-eabi-gdb",
             "preLaunchTask": "CMSIS Load",
             "initCommands": [
@@ -40,7 +40,7 @@
                 "server": "pyocd",
                 "serverParameters": [
                     "--probe",
-                    "stlink:",
+                    "cmsisdap:",
                     "--connect",
                     "attach"
                 ],
@@ -52,11 +52,11 @@
             }
         },
         {
-            "name": "STLink@pyOCD (attach)",
+            "name": "CMSIS_DAP@pyOCD (attach)",
             "type": "gdbtarget",
             "request": "attach",
             "cwd": "${workspaceFolder}/",
-            "program": "out/hello_nucleo/NUCLEO-F756ZG/Debug/hello_nucleo.axf",
+            "program": "out/hello_avh/avh/Debug/hello_avh.axf",
             "gdb": "arm-none-eabi-gdb",
             "initCommands": [
                 ""
