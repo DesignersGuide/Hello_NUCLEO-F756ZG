@@ -25,9 +25,11 @@ solution:
       board: STMicroelectronics::NUCLEO-F756ZG
       device: STMicroelectronics::STM32F756ZGTx
       target-set:
-       - set: 
-         debugger:
-           name: ST-LINK
+        - set:
+          debugger:
+            name: ST-LINK
+          images:
+            - project-context: hello_nucleo.Debug
     - type: avh
       device: ARMCM7
 
